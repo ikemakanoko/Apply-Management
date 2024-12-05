@@ -26,7 +26,7 @@ public class AppliedCompanyListComtroller {
 	//appliedCompanyListMapperはAppliedCompanyMapperを利用するためのフィールド
 	//AppliedCompanyMapperは機能の集合
 
-	//topぺーじ　localhost:8080/top
+	//topページ　localhost:8080/top
 
 	//一覧
 	@GetMapping("/appliedCompanyList")
