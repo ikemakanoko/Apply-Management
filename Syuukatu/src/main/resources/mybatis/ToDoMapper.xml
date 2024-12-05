@@ -8,9 +8,9 @@
 
 	<insert id="add" parameterType="Todo">
 		insert into task
-		(executed, task, unexecuted)
+		(task_name, executed, created_at, updated_at)
 		values
-		(#{executed}, #{task}, #{unexecuted})
+		(#{task_name}, #{executed}, #{created_at}, #{updated_at})
 	</insert>
 
 	<select id="selectById" resultType="Todo">
@@ -22,15 +22,16 @@
 
 	<delete id="deleteById" parameterType="Integer">
 		DELETE FROM
-		`syuukatu_db`.`task`
+		`task_name`.`executed`.`created_at`.`updated_at`
 		WHERE id = #{id};
 	</delete>
 
 	<update id="update" parameterType="Todo">
 		UPDATE task SET
+		task_name = #{task_name},
 		executed = #{executed},
-		task = #{task},
-		unexecuted = #{unexecuted},
+		created_at = #{created_at},
+		updated_at = #{updated_at},
 		WHERE id = #{id};
 	</update>
 

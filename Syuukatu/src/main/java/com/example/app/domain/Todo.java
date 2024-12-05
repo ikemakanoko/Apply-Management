@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class Todo {
 	private int id;
-	private String task;
+	private String done;
 	private String executed;
-	private String unexecuted;
 }
